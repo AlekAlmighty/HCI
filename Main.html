@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/ceebde003c.js"></script>
+  </head>
+  <body>
+    <!-- MAIN PAGE -->
+    <div class="root">
+      <div class="bckbtn">
+        <a href="index.html"> 
+          <i class="fa-solid fa-circle-chevron-left"></i>
+        </a> 
+      </div>
+      
+
+      <!-- Grid Items -->
+      <div class="grid-container">
+          <div class="grid-item" > <a href="Mobo.html">MOTHERBOARD</a></div>
+          <div class="grid-item"> <a href="cpu.html">PROCESSOR</a></div>
+          <div class="grid-item"> <a href="ram.html">RAM</a></div>
+          <div class="grid-item"><a href="">SSD</a></div>
+          <div class="grid-item"><a href="">HDD</a></div>
+          <div class="grid-item"><a href="">CPU COOLER</a></div>
+          <div class="grid-item"><a href="">FAN</a></div>
+          <div class="grid-item"><a href="">CASE</a></div>
+          <div class="grid-item"><a href="">ACCESORIES</a></div>
+      </div>  
+      <!-- Grid Items -->
+    </div>
+    <script>
+      const boxes = document.querySelectorAll(".grid-item");
+
+      const checkBoxes = () => {
+      const triggerBottom = (window.innerHeight / 5) * 4; // Corrected the calculation
+      boxes.forEach((box) => {
+      const boxTop = box.getBoundingClientRect().top;
+      if (boxTop < triggerBottom) {
+        box.classList.add("show");
+      } else {
+      box.classList.remove("show");
+      }
+    });
+    };
+    window.addEventListener("scroll", checkBoxes);
+    checkBoxes();
+    </script>
+    <!-- END OF MAIN PAGE -->
+  </body>
+</html>

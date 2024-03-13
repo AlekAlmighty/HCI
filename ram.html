@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Angkor&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ceebde003c.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>MOTHERBOARD</title>
+</head>
+<body onload="readAll()">
+    <div class="container" onload="readAll()">
+        <div class="outerbox">
+            <div class="form_container">
+                <h1>RAM</h1>
+                <a href="Main.html" style="margin-right: 10px;"> 
+                    <i class="fa-solid fa-circle-chevron-left"></i>
+                  </a>
+            <form action="text" class="create_form">
+                <input type="text" placeholder="Enter Product Name" class="name">
+                <input type="text" placeholder="Enter Amount" class="email">
+                <button type="button" onclick="add()">Create</button>
+            </form>
+            <form action="text" class="update_form">
+                <input type="text" hidden class="update_id">
+                <input type="text" placeholder="Enter Product Name" class="uname">
+                <input type="text" placeholder="Enter Amount" class="uemail">
+                <button type="button" onclick="update()">Update</button>
+            </form>
+            <button class="addbtn" onclick="createForm()">ADD NEW PRODUCT</button>
+            <br />
+            <table class="table">
+                <thead>
+                    <th style="width: 30vw;">Product Name</th>
+                    <th>Amount</th>
+                    <th>Action</th>
+                </thead>
+                <tbody class="table_data">
+    
+                </tbody>
+            </table>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+    
+</body>
+</html>
